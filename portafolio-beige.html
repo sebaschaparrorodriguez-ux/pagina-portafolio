@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Joan Sebastian Chaparro | Portafolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Paleta: cambia estos valores para moldear todo el diseño */
+:root{--bg:#EEEAE2;--card:#F6F3ED;--ink:#2B2A28;--muted:#6F6B64;--line:#D6D0C4;--accent:#2B2A28;--tbg:#2B2A28;--tink:#E9E4DA;--tsoft:#A9A398;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1D1C1A;--card:#252421;--ink:#ECE8E1;--muted:#A29D94;--line:#37352F;--accent:#ECE8E1;--tbg:#141311}}
+:root[data-theme="dark"]{--bg:#1D1C1A;--card:#252421;--ink:#ECE8E1;--muted:#A29D94;--line:#37352F;--accent:#ECE8E1;--tbg:#141311}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Manrope',system-ui,sans-serif;line-height:1.7;font-size:16.5px;font-weight:400}
+a{color:var(--ink)}
+.w{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;gap:26px;align-items:center;padding:24px 0;flex-wrap:wrap}
+nav b{margin-right:auto;font-weight:800;letter-spacing:.02em}
+nav a{text-decoration:none;color:var(--muted);font-size:14.5px}
+nav a:hover{color:var(--ink)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding:56px 0 88px}
+h1{font-size:clamp(38px,5.6vw,68px);line-height:1.04;margin:0 0 22px;font-weight:300;letter-spacing:-.035em}
+h1 strong{font-weight:800}
+.lead{color:var(--muted);font-size:18px;max-width:29em;margin:0 0 30px}
+.btn{display:inline-block;padding:11px 24px;border-radius:99px;font-size:15px;font-weight:600;text-decoration:none;border:1px solid var(--ink);color:var(--ink);transition:background .2s,color .2s}
+.btn.p{background:var(--accent);color:var(--bg)}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.term{background:var(--tbg);color:var(--tink);border-radius:10px;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:13px}
+.tb{padding:12px 16px;color:var(--tsoft);font-size:12px;border-bottom:1px solid rgba(255,255,255,.08)}
+#out{height:290px;overflow-y:auto;padding:16px;white-space:pre-wrap;word-break:break-word}
+#out a{color:var(--tink)}
+.pr{color:var(--tsoft)}.dim{color:var(--tsoft)}
+.in{display:flex;gap:8px;padding:0 16px 12px}
+.in input{flex:1;background:transparent;border:0;color:inherit;font:inherit;outline:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 16px 16px}
+.chips button{font:inherit;background:transparent;color:var(--tink);border:1px solid rgba(255,255,255,.18);border-radius:99px;padding:3px 12px;cursor:pointer}
+.chips button:hover{background:var(--tink);color:var(--tbg)}
+section{display:grid;grid-template-columns:200px 1fr;gap:40px;padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:15px;font-weight:600;margin:0;color:var(--muted);letter-spacing:.01em}
+.big{font-size:clamp(22px,2.6vw,29px);line-height:1.4;font-weight:300;margin:0 0 28px;letter-spacing:-.015em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:22px;margin:0}
+.facts dt{font-size:13px;color:var(--muted)}.facts dd{margin:2px 0 0;font-weight:600}
+h3.g{font-size:14px;font-weight:600;color:var(--muted);margin:0 0 12px}
+.rows{border-top:1px solid var(--line);margin-bottom:36px}
+.row{display:flex;justify-content:space-between;gap:20px;align-items:baseline;width:100%;text-align:left;font:inherit;color:inherit;background:none;border:0;border-bottom:1px solid var(--line);padding:16px 4px}
+button.row{cursor:pointer;transition:padding .2s,background .2s}
+button.row:hover,button.row[aria-pressed=true]{background:var(--card);padding-left:16px}
+.row b{font-size:21px;font-weight:600;min-width:9em}
+.row.main b{font-weight:800}
+.row span{color:var(--muted);font-size:15px;flex:1}
+.row em{font-style:normal;font-size:13px;color:var(--muted);white-space:nowrap}
+.fl{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.fl button{font:inherit;font-size:14px;padding:5px 16px;border-radius:99px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer}
+.fl button[aria-pressed=true]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.pj{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.pj h3{margin:0;font-size:18px;font-weight:600;line-height:1.3}.pj p{margin:0;color:var(--muted);font-size:15px;flex:1}
+.tg{display:flex;flex-wrap:wrap;gap:6px}.tg span{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:1px 10px;border-radius:99px}
+.tg .l{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:1px solid var(--line)}
+summary{cursor:pointer;padding:18px 4px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';font-size:22px;color:var(--muted);transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+.t b{display:block;font-size:18px;font-weight:600}.t i{font-style:normal;color:var(--muted);font-size:15px}
+details p{margin:0 0 20px;padding:0 4px;color:var(--muted);max-width:38em}
+footer{padding:28px 0 36px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media(max-width:860px){.hero{grid-template-columns:1fr;gap:40px}section{grid-template-columns:1fr;gap:18px}.row{flex-wrap:wrap;gap:4px}.row b{min-width:0;width:100%}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="w">
+<nav aria-label="Principal"><b>Joan Chaparro</b><a href="#sobre-mi">Sobre mí</a><a href="#lenguajes">Tecnologías</a><a href="#proyectos">Proyectos</a><a href="#blandas">Habilidades blandas</a><a href="#contacto">Contacto</a></nav>
+
+<header class="hero">
+<div>
+<h1><strong>Joan Sebastian</strong> Chaparro Rodriguez</h1>
+<p class="lead">Desarrollador en formación desde San Gil, Santander. Python, bases de datos, formatos de datos y automatización, con la lógica pensada antes del código.</p>
+<a class="btn p" href="#proyectos">Ver proyectos</a> <a class="btn" href="https://github.com/sebaschaparrorodriguez-ux" target="_blank" rel="noopener">GitHub</a>
+</div>
+<div class="term" role="region" aria-label="Terminal interactiva">
+<div class="tb">Portafolio Joan Chaparro</div>
+<div id="out" aria-live="polite"></div>
+<label class="in"><span class="pr">&gt;&gt;&gt;</span><input id="cmd" autocomplete="off" spellcheck="false" placeholder="escribe help" aria-label="Comando"></label>
+<div class="chips" id="chips"></div>
+</div>
+</header>
+
+<section id="sobre-mi">
+<h2>Sobre mí</h2>
+<div>
+<p class="big">Soy Joan Sebastian, de San Gil, Santander. Empecé con pseudocódigo para entender la lógica, seguí con Python y hoy sumo bases de datos, formatos de datos y automatización.</p>
+<p style="color:var(--muted);max-width:38em;margin:0 0 32px">Me gusta construir programas simples que resuelven una necesidad concreta y que cualquiera pueda entender. Busco un equipo donde aprender rápido, aportar con constancia y crecer como desarrollador.</p>
+<dl class="facts">
+<div><dt>Ubicación</dt><dd>San Gil, Santander, Colombia</dd></div>
+<div><dt>Enfoque</dt><dd>Lógica, datos y automatización</dd></div>
+<div><dt>Lenguaje principal</dt><dd>Python</dd></div>
+<div><dt>Busco</dt><dd>Prácticas o primer empleo</dd></div>
+</dl>
+</div>
+</section>
+
+<section id="lenguajes">
+<h2>Lenguajes y tecnologías</h2>
+<div>
+<h3 class="g">Con proyectos en GitHub (toca uno para filtrar)</h3>
+<div class="rows" id="lp">
+<button class="row main" data-l="Python" aria-pressed="false"><b>Python</b><span>Mi lenguaje principal: programas de terminal con menús, datos de usuario y rankings.</span><em>2 proyectos</em></button>
+<button class="row" data-l="MySQL" aria-pressed="false"><b>MySQL</b><span>Bases de datos relacionales y consultas.</span><em>1 proyecto</em></button>
+<button class="row" data-l="Pseudocódigo" aria-pressed="false"><b>Pseudocódigo</b><span>Diseño de algoritmos antes de programar.</span><em>1 proyecto</em></button>
+</div>
+<h3 class="g">También manejo</h3>
+<div class="rows">
+<div class="row"><b>JavaScript</b><span>Lógica e interactividad para la web.</span></div>
+<div class="row"><b>Java</b><span>Programación orientada a objetos.</span></div>
+<div class="row"><b>JSON</b><span>Intercambio de datos entre sistemas y APIs.</span></div>
+<div class="row"><b>BSON</b><span>Formato binario de documentos, el que usa MongoDB.</span></div>
+<div class="row"><b>n8n</b><span>Automatización de flujos de trabajo entre aplicaciones.</span></div>
+</div>
+</div>
+</section>
+
+<section id="proyectos">
+<h2>Proyectos</h2>
+<div>
+<div class="fl" id="fl" role="group" aria-label="Filtrar por lenguaje"></div>
+<div class="grid" id="grid"></div>
+</div>
+</section>
+
+<section id="blandas">
+<h2>Habilidades blandas</h2>
+<div>
+<details open><summary><span class="t"><b>Pensamiento lógico</b><i>Descompongo el problema antes de programarlo.</i></span></summary><p>Mi examen de cálculo de notas lo resolví primero en pseudocódigo. Entender el flujo antes de la sintaxis me ahorra errores y reescrituras.</p></details>
+<details><summary><span class="t"><b>Aprendizaje autónomo</b><i>Aprendo rápido y sin que me lo pidan.</i></span></summary><p>Pasé de pseudocódigo a Python, bases de datos, formatos de datos y automatización, y cada tema lo practico con algo real.</p></details>
+<details><summary><span class="t"><b>Comunicación clara</b><i>Explico lo técnico en palabras simples.</i></span></summary><p>Busco que cada programa se explique solo: menús ordenados y mensajes que guían a quien lo usa, aunque no sepa programar.</p></details>
+<details><summary><span class="t"><b>Trabajo en equipo</b><i>Recibo feedback como combustible.</i></span></summary><p>Prefiero revisar código con otra persona: dos miradas encuentran errores que una sola no ve, y de cada revisión me llevo algo nuevo.</p></details>
+<details><summary><span class="t"><b>Responsabilidad y constancia</b><i>Entrego lo que prometo.</i></span></summary><p>Llevo cada proyecto hasta que corre de principio a fin y lo subo a GitHub para que cualquiera pueda comprobarlo.</p></details>
+<details><summary><span class="t"><b>Adaptabilidad</b><i>Cambio de herramienta sin perder el ritmo.</i></span></summary><p>Python, SQL, JavaScript, Java o n8n: la lógica es la misma y solo cambia la herramienta. Eso me permite incorporar tecnologías nuevas con rapidez.</p></details>
+</div>
+</section>
+
+<section id="contacto">
+<h2>Contacto</h2>
+<div>
+<p class="big">Busco mi primera oportunidad para aportar con código y seguir creciendo en un equipo.</p>
+<a class="btn p" href="https://github.com/sebaschaparrorodriguez-ux" target="_blank" rel="noopener">Escríbeme por GitHub</a>
+</div>
+</section>
+<footer>Joan Sebastian Chaparro Rodriguez, San Gil, Santander, Colombia.</footer>
+</div>
+
+<script>
+const G='https://github.com/sebaschaparrorodriguez-ux/';
+/* Para agregar un proyecto, copia una línea y cambia los datos */
+const P=[
+{n:'Clasificador de videojuegos',l:'Python',r:'Clasificador-de-videojuegos',d:'Recibe por terminal tus videojuegos con horas jugadas y puntuación personal, y entrega tu top 3.',t:['Terminal','Ranking']},
+{n:'Sistema de finanzas',l:'Python',r:'Sistema-de-Finanzas',d:'Sistema en Python para organizar y consultar finanzas personales desde la terminal.',t:['Terminal','Lógica']},
+{n:'Sistema guía de menús',l:'Sistemas',r:'SistemaGuiaDeMenus',d:'Sistema navegable por menús, pensado para guiar al usuario paso a paso.',t:['Menús','Experiencia de uso']},
+{n:'Examen MySQL',l:'MySQL',r:'Examen-MySql',d:'Ejercicio de bases de datos relacionales resuelto con MySQL.',t:['SQL','Bases de datos']},
+{n:'Pseudocódigo para calcular notas',l:'Pseudocódigo',r:'Examen-Introduccion-Joan-Sebastian-Chaparro-Rodriguez',d:'Solución del examen de introducción: algoritmo en pseudocódigo (Papyrus) para calcular notas.',t:['Algoritmos','Papyrus']}
+];
+let f='Todos';
+const esc=s=>s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+function draw(){
+ document.getElementById('fl').innerHTML=['Todos','Python','MySQL','Pseudocódigo'].map(x=>`<button aria-pressed="${x===f}" data-f="${x}">${x}</button>`).join('');
+ document.getElementById('grid').innerHTML=P.filter(p=>f==='Todos'||p.l===f).map(p=>`<article class="pj"><h3>${p.n}</h3><div class="tg"><span class="l">${p.l}</span>${p.t.map(t=>`<span>${t}</span>`).join('')}</div><p>${p.d}</p><a href="${G}${p.r}" target="_blank" rel="noopener">Ver código en GitHub</a></article>`).join('');
+ document.querySelectorAll('#lp .row').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l===f));
+}
+document.getElementById('fl').onclick=e=>{const b=e.target.closest('button');if(b){f=b.dataset.f;draw()}};
+document.getElementById('lp').onclick=e=>{const b=e.target.closest('.row');if(b){f=b.dataset.l;draw();document.getElementById('proyectos').scrollIntoView()}};
+draw();
+
+/* Terminal */
+const out=document.getElementById('out'),inp=document.getElementById('cmd');
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const sleep=ms=>new Promise(r=>setTimeout(r,reduce?0:ms));
+function pr(h,c){const d=document.createElement('div');d.className=c||'';d.innerHTML=h;out.appendChild(d);out.scrollTop=out.scrollHeight}
+const C={
+help:()=>'Comandos:\n  about     quién soy\n  skills    lenguajes y tecnologías\n  projects  mis repositorios\n  soft      habilidades blandas\n  contact   cómo encontrarme\n  clear     limpiar pantalla',
+about:()=>'Joan Sebastian Chaparro Rodriguez\nDesarrollador en formación, San Gil, Santander.\nMe gusta que el código sea claro y que el programa se explique solo.',
+skills:()=>'Python (principal), MySQL, Pseudocódigo\nJavaScript, Java, JSON, BSON, n8n',
+projects:()=>P.map(p=>`<a href="${G}${p.r}" target="_blank" rel="noopener">${p.n}</a> <span class="dim">(${p.l})</span>`).join('\n'),
+soft:()=>'Pensamiento lógico, aprendizaje autónomo, comunicación clara,\ntrabajo en equipo, responsabilidad y adaptabilidad.',
+contact:()=>`GitHub: <a href="${G.slice(0,-1)}" target="_blank" rel="noopener">sebaschaparrorodriguez-ux</a>`
+};
+function run(raw){
+ const c=raw.trim().toLowerCase();if(!c)return;
+ pr('<span class="pr">&gt;&gt;&gt;</span> '+esc(raw));
+ if(c==='clear'){out.innerHTML='';return}
+ pr(C[c]?C[c]():`Comando no reconocido: ${esc(c)}. Escribe help para ver la lista.`);
+}
+inp.addEventListener('keydown',e=>{if(e.key==='Enter'){run(inp.value);inp.value=''}});
+document.getElementById('chips').innerHTML=['about','skills','projects','soft','contact'].map(x=>`<button>${x}</button>`).join('');
+document.getElementById('chips').onclick=e=>{const b=e.target.closest('button');if(b)run(b.textContent)};
+(async()=>{
+ const d=document.createElement('div');d.innerHTML='<span class="pr">&gt;&gt;&gt;</span> <span id="ty"></span>';out.appendChild(d);
+ const ty=d.querySelector('#ty');
+ for(const ch of 'bienvenidos :D'){ty.textContent+=ch;await sleep(55)}
+ await sleep(250);
+ for(const l of ['Hola, soy Joan Sebastian.','Soy desarrollador en formación, especializado en Python, MySQL, JavaScript, Java, JSON, BSON y n8n.','Escribe un comando o toca un botón.']){pr(l);await sleep(350)}
+})();
+</script>
+</body>
+</html>
