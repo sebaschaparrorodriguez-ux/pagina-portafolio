@@ -77,6 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('proyectos').scrollIntoView();
   });
 
+  I18N.init();
   render();
   initTerminal();
 });

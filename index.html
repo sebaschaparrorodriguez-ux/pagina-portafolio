@@ -3,7 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Joan Sebastian Chaparro | Portafolio</title>
+<!-- Los textos marcados con data-i18n se traducen desde js/translations.js.
+     El español queda escrito aquí como respaldo si JavaScript no carga. -->
+<title data-i18n="meta.title">Joan Sebastian Chaparro | Portafolio</title>
+<meta name="description" data-i18n-attr="content:meta.description" content="Portafolio de Joan Sebastian Chaparro Rodriguez, desarrollador en formación: Python, bases de datos, formatos de datos y automatización.">
 
 <!-- Tipografías -->
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -15,31 +18,38 @@
 <div class="w">
 
   <!-- ============ NAVEGACIÓN ============ -->
-  <nav aria-label="Principal">
+  <nav aria-label="Principal" data-i18n-attr="aria-label:nav.label">
     <b>Joan Chaparro</b>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#lenguajes">Tecnologías</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#blandas">Habilidades blandas</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+    <a href="#lenguajes" data-i18n="nav.tech">Tecnologías</a>
+    <a href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+    <a href="#blandas" data-i18n="nav.soft">Habilidades blandas</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
+
+    <!-- Selector de idioma: la lógica vive en js/i18n.js -->
+    <div class="lang" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.label">
+      <button type="button" data-lang="es" lang="es" title="Español" aria-pressed="true">ES</button>
+      <button type="button" data-lang="en" lang="en" title="English" aria-pressed="false">EN</button>
+    </div>
   </nav>
 
   <!-- ============ PORTADA ============ -->
   <header class="hero">
     <div>
       <h1><strong>Joan Sebastian</strong> Chaparro Rodriguez</h1>
-      <p class="lead">Desarrollador en formación desde San Gil, Santander. Python, bases de datos, formatos de datos y automatización, con la lógica pensada antes del código.</p>
-      <a class="btn p" href="#proyectos">Ver proyectos</a>
+      <p class="lead" data-i18n="hero.lead">Desarrollador en formación desde San Gil, Santander. Python, bases de datos, formatos de datos y automatización, con la lógica pensada antes del código.</p>
+      <a class="btn p" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
       <a class="btn" href="https://github.com/sebaschaparrorodriguez-ux" target="_blank" rel="noopener">GitHub</a>
     </div>
 
     <!-- Terminal interactiva: su lógica vive en js/terminal.js -->
-    <div class="term" role="region" aria-label="Terminal interactiva">
-      <div class="tb">Portafolio Joan Chaparro</div>
+    <div class="term" role="region" aria-label="Terminal interactiva" data-i18n-attr="aria-label:term.label">
+      <div class="tb" data-i18n="term.title">Portafolio Joan Chaparro</div>
       <div id="out" aria-live="polite"></div>
       <label class="in">
         <span class="pr">&gt;&gt;&gt;</span>
-        <input id="cmd" autocomplete="off" spellcheck="false" placeholder="escribe help" aria-label="Comando">
+        <input id="cmd" autocomplete="off" spellcheck="false" placeholder="escribe help" aria-label="Comando"
+               data-i18n-attr="placeholder:term.placeholder; aria-label:term.inputLabel">
       </label>
       <div class="chips" id="chips"></div>
     </div>
@@ -47,44 +57,44 @@
 
   <!-- ============ SOBRE MÍ ============ -->
   <section id="sobre-mi">
-    <h2>Sobre mí</h2>
+    <h2 data-i18n="about.title">Sobre mí</h2>
     <div>
-      <p class="big">Soy Joan Sebastian, de San Gil, Santander. Empecé con pseudocódigo para entender la lógica, seguí con Python y hoy sumo bases de datos, formatos de datos y automatización.</p>
-      <p style="color:var(--muted);max-width:38em;margin:0 0 32px">Me gusta construir programas simples que resuelven una necesidad concreta y que cualquiera pueda entender. Busco un equipo donde aprender rápido, aportar con constancia y crecer como desarrollador.</p>
+      <p class="big" data-i18n="about.intro">Soy Joan Sebastian, de San Gil, Santander. Empecé con pseudocódigo para entender la lógica, seguí con Python y hoy sumo bases de datos, formatos de datos y automatización.</p>
+      <p style="color:var(--muted);max-width:38em;margin:0 0 32px" data-i18n="about.body">Me gusta construir programas simples que resuelven una necesidad concreta y que cualquiera pueda entender. Busco un equipo donde aprender rápido, aportar con constancia y crecer como desarrollador.</p>
       <dl class="facts">
-        <div><dt>Ubicación</dt><dd>San Gil, Santander, Colombia</dd></div>
-        <div><dt>Enfoque</dt><dd>Lógica, datos y automatización</dd></div>
-        <div><dt>Lenguaje principal</dt><dd>Python</dd></div>
-        <div><dt>Busco</dt><dd>Oportunidades para crecer como desarrollador y aportar a proyectos con impacto</dd></div>
+        <div><dt data-i18n="about.facts.location">Ubicación</dt><dd>San Gil, Santander, Colombia</dd></div>
+        <div><dt data-i18n="about.facts.focus">Enfoque</dt><dd data-i18n="about.facts.focusValue">Lógica, datos y automatización</dd></div>
+        <div><dt data-i18n="about.facts.mainLang">Lenguaje principal</dt><dd>Python</dd></div>
+        <div><dt data-i18n="about.facts.seeking">Busco</dt><dd data-i18n="about.facts.seekingValue">Oportunidades para crecer como desarrollador y aportar a proyectos con impacto</dd></div>
       </dl>
     </div>
   </section>
 
   <!-- ============ LENGUAJES Y TECNOLOGÍAS ============ -->
   <section id="lenguajes">
-    <h2>Lenguajes y tecnologías</h2>
+    <h2 data-i18n="tech.title">Lenguajes y tecnologías</h2>
     <div>
-      <h3 class="g">Con proyectos en GitHub (toca uno para filtrar)</h3>
+      <h3 class="g" data-i18n="tech.withProjects">Con proyectos en GitHub (toca uno para filtrar)</h3>
       <!-- Estos tres botones se marcan como activos desde js/app.js -->
       <div class="rows" id="lp">
         <button class="row main" data-l="Python" aria-pressed="false">
-          <b>Python</b><span>Mi lenguaje principal: programas de terminal con menús, datos de usuario y rankings.</span><em>2 proyectos</em>
+          <b>Python</b><span data-i18n="tech.desc.python">Mi lenguaje principal: programas de terminal con menús, datos de usuario y rankings.</span><em>2 proyectos</em>
         </button>
         <button class="row" data-l="MySQL" aria-pressed="false">
-          <b>MySQL</b><span>Bases de datos relacionales y consultas.</span><em>1 proyecto</em>
+          <b>MySQL</b><span data-i18n="tech.desc.mysql">Bases de datos relacionales y consultas.</span><em>1 proyecto</em>
         </button>
         <button class="row" data-l="Pseudocódigo" aria-pressed="false">
-          <b>Pseudocódigo</b><span>Diseño de algoritmos antes de programar.</span><em>1 proyecto</em>
+          <b data-i18n="techName.pseudocode">Pseudocódigo</b><span data-i18n="tech.desc.pseudocode">Diseño de algoritmos antes de programar.</span><em>1 proyecto</em>
         </button>
       </div>
 
-      <h3 class="g">También manejo</h3>
+      <h3 class="g" data-i18n="tech.alsoKnow">También manejo</h3>
       <div class="rows">
-        <div class="row"><b>JavaScript</b><span>Lógica e interactividad para la web.</span></div>
-        <div class="row"><b>Java</b><span>Programación orientada a objetos.</span></div>
-        <div class="row"><b>JSON</b><span>Intercambio de datos entre sistemas y APIs.</span></div>
-        <div class="row"><b>BSON</b><span>Formato binario de documentos, el que usa MongoDB.</span></div>
-        <div class="row"><b>n8n</b><span>Automatización de flujos de trabajo entre aplicaciones.</span></div>
+        <div class="row"><b>JavaScript</b><span data-i18n="tech.desc.javascript">Lógica e interactividad para la web.</span></div>
+        <div class="row"><b>Java</b><span data-i18n="tech.desc.java">Programación orientada a objetos.</span></div>
+        <div class="row"><b>JSON</b><span data-i18n="tech.desc.json">Intercambio de datos entre sistemas y APIs.</span></div>
+        <div class="row"><b>BSON</b><span data-i18n="tech.desc.bson">Formato binario de documentos, el que usa MongoDB.</span></div>
+        <div class="row"><b>n8n</b><span data-i18n="tech.desc.n8n">Automatización de flujos de trabajo entre aplicaciones.</span></div>
       </div>
     </div>
   </section>
@@ -92,50 +102,50 @@
   <!-- ============ PROYECTOS ============ -->
   <!-- El contenido de .fl y .grid se genera desde js/app.js usando js/data.js -->
   <section id="proyectos">
-    <h2>Proyectos</h2>
+    <h2 data-i18n="projects.title">Proyectos</h2>
     <div>
-      <div class="fl" id="fl" role="group" aria-label="Filtrar por lenguaje"></div>
+      <div class="fl" id="fl" role="group" aria-label="Filtrar por lenguaje" data-i18n-attr="aria-label:projects.filterLabel"></div>
       <div class="grid" id="grid"></div>
     </div>
   </section>
 
   <!-- ============ HABILIDADES BLANDAS ============ -->
   <section id="blandas">
-    <h2>Habilidades blandas</h2>
+    <h2 data-i18n="soft.title">Habilidades blandas</h2>
     <div>
       <details open>
-        <summary><span class="t"><b>Pensamiento lógico</b><i>Descompongo el problema antes de programarlo.</i></span></summary>
-        <p>Mi examen de cálculo de notas lo resolví primero en pseudocódigo. Entender el flujo antes de la sintaxis me ahorra errores y reescrituras.</p>
+        <summary><span class="t"><b data-i18n="soft.logic.name">Pensamiento lógico</b><i data-i18n="soft.logic.summary">Descompongo el problema antes de programarlo.</i></span></summary>
+        <p data-i18n="soft.logic.detail">Mi examen de cálculo de notas lo resolví primero en pseudocódigo. Entender el flujo antes de la sintaxis me ahorra errores y reescrituras.</p>
       </details>
       <details>
-        <summary><span class="t"><b>Aprendizaje autónomo</b><i>Aprendo rápido y sin que me lo pidan.</i></span></summary>
-        <p>Pasé de pseudocódigo a Python, bases de datos, formatos de datos y automatización, y cada tema lo practico con algo real.</p>
+        <summary><span class="t"><b data-i18n="soft.learning.name">Aprendizaje autónomo</b><i data-i18n="soft.learning.summary">Aprendo rápido y sin que me lo pidan.</i></span></summary>
+        <p data-i18n="soft.learning.detail">Pasé de pseudocódigo a Python, bases de datos, formatos de datos y automatización, y cada tema lo practico con algo real.</p>
       </details>
       <details>
-        <summary><span class="t"><b>Comunicación clara</b><i>Explico lo técnico en palabras simples.</i></span></summary>
-        <p>Busco que cada programa se explique solo: menús ordenados y mensajes que guían a quien lo usa, aunque no sepa programar.</p>
+        <summary><span class="t"><b data-i18n="soft.communication.name">Comunicación clara</b><i data-i18n="soft.communication.summary">Explico lo técnico en palabras simples.</i></span></summary>
+        <p data-i18n="soft.communication.detail">Busco que cada programa se explique solo: menús ordenados y mensajes que guían a quien lo usa, aunque no sepa programar.</p>
       </details>
       <details>
-        <summary><span class="t"><b>Trabajo en equipo</b><i>Recibo feedback como combustible.</i></span></summary>
-        <p>Prefiero revisar código con otra persona: dos miradas encuentran errores que una sola no ve, y de cada revisión me llevo algo nuevo.</p>
+        <summary><span class="t"><b data-i18n="soft.teamwork.name">Trabajo en equipo</b><i data-i18n="soft.teamwork.summary">Recibo feedback como combustible.</i></span></summary>
+        <p data-i18n="soft.teamwork.detail">Prefiero revisar código con otra persona: dos miradas encuentran errores que una sola no ve, y de cada revisión me llevo algo nuevo.</p>
       </details>
       <details>
-        <summary><span class="t"><b>Responsabilidad y constancia</b><i>Entrego lo que prometo.</i></span></summary>
-        <p>Llevo cada proyecto hasta que corre de principio a fin y lo subo a GitHub para que cualquiera pueda comprobarlo.</p>
+        <summary><span class="t"><b data-i18n="soft.ownership.name">Responsabilidad y constancia</b><i data-i18n="soft.ownership.summary">Entrego lo que prometo.</i></span></summary>
+        <p data-i18n="soft.ownership.detail">Llevo cada proyecto hasta que corre de principio a fin y lo subo a GitHub para que cualquiera pueda comprobarlo.</p>
       </details>
       <details>
-        <summary><span class="t"><b>Adaptabilidad</b><i>Cambio de herramienta sin perder el ritmo.</i></span></summary>
-        <p>Python, SQL, JavaScript, Java o n8n: la lógica es la misma y solo cambia la herramienta. Eso me permite incorporar tecnologías nuevas con rapidez.</p>
+        <summary><span class="t"><b data-i18n="soft.adaptability.name">Adaptabilidad</b><i data-i18n="soft.adaptability.summary">Cambio de herramienta sin perder el ritmo.</i></span></summary>
+        <p data-i18n="soft.adaptability.detail">Python, SQL, JavaScript, Java o n8n: la lógica es la misma y solo cambia la herramienta. Eso me permite incorporar tecnologías nuevas con rapidez.</p>
       </details>
     </div>
   </section>
 
   <!-- ============ CONTACTO ============ -->
   <section id="contacto">
-    <h2>Contacto</h2>
+    <h2 data-i18n="contact.title">Contacto</h2>
     <div>
-      <p class="big">Busco mejorar constantemente mis habilidades y contribuir a proyectos significativos.</p>
-      <a class="btn p" href="https://github.com/sebaschaparrorodriguez-ux" target="_blank" rel="noopener">Escríbeme por GitHub</a>
+      <p class="big" data-i18n="contact.lead">Busco mejorar constantemente mis habilidades y contribuir a proyectos significativos.</p>
+      <a class="btn p" href="https://github.com/sebaschaparrorodriguez-ux" target="_blank" rel="noopener" data-i18n="contact.cta">Escríbeme por GitHub</a>
     </div>
   </section>
 
