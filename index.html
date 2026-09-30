@@ -75,15 +75,16 @@
     <h2 data-i18n="tech.title">Lenguajes y tecnologías</h2>
     <div>
       <h3 class="g" data-i18n="tech.withProjects">Con proyectos en GitHub (toca uno para filtrar)</h3>
-      <!-- Estos tres botones se marcan como activos desde js/app.js -->
+      <!-- Estos tres botones se marcan como activos desde js/app.js.
+           data-l es el id del lenguaje en js/data.js; el contador (em) se calcula solo -->
       <div class="rows" id="lp">
-        <button class="row main" data-l="Python" aria-pressed="false">
+        <button class="row main" data-l="python" aria-pressed="false">
           <b>Python</b><span data-i18n="tech.desc.python">Mi lenguaje principal: programas de terminal con menús, datos de usuario y rankings.</span><em>2 proyectos</em>
         </button>
-        <button class="row" data-l="MySQL" aria-pressed="false">
+        <button class="row" data-l="mysql" aria-pressed="false">
           <b>MySQL</b><span data-i18n="tech.desc.mysql">Bases de datos relacionales y consultas.</span><em>1 proyecto</em>
         </button>
-        <button class="row" data-l="Pseudocódigo" aria-pressed="false">
+        <button class="row" data-l="pseudocode" aria-pressed="false">
           <b data-i18n="techName.pseudocode">Pseudocódigo</b><span data-i18n="tech.desc.pseudocode">Diseño de algoritmos antes de programar.</span><em>1 proyecto</em>
         </button>
       </div>
