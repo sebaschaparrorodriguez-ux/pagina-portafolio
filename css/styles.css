@@ -3,7 +3,7 @@
    Estilos del portafolio. Está dividido por secciones:
    1. Paleta de colores (modo claro / oscuro)
    2. Reglas base
-   3. Navegación
+   3. Navegación y selector de idioma
    4. Portada (hero) y terminal
    5. Secciones generales (Sobre mí, Lenguajes, etc.)
    6. Proyectos
@@ -60,6 +60,12 @@ nav{display:flex;gap:26px;align-items:center;padding:24px 0;flex-wrap:wrap}
 nav b{margin-right:auto;font-weight:800;letter-spacing:.02em}
 nav a{text-decoration:none;color:var(--muted);font-size:14.5px}
 nav a:hover{color:var(--ink)}
+
+/* Selector de idioma ES / EN */
+.lang{display:inline-flex;gap:2px;padding:2px;border:1px solid var(--line);border-radius:99px}
+.lang button{font:inherit;font-size:12px;font-weight:600;letter-spacing:.06em;padding:3px 11px;border:0;border-radius:99px;background:transparent;color:var(--muted);cursor:pointer;transition:background .2s,color .2s}
+.lang button:hover{color:var(--ink)}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--bg)}
 
 /* ---------- 4. PORTADA Y TERMINAL ---------- */
 .hero{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:center;padding:56px 0 88px}
