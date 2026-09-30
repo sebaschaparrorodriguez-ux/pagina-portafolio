@@ -53,7 +53,9 @@
 
     projects: () =>
       PROJECTS.map(
-        (p) => `<a href="${GITHUB_USER}${p.r}" target="_blank" rel="noopener">${p.n}</a> <span class="dim">(${p.l})</span>`
+        (p) =>
+          `<a href="${GITHUB_USER}${p.r}" target="_blank" rel="noopener">${I18N.pick(p.n)}</a> ` +
+          `<span class="dim">(${I18N.t(`techName.${p.l}`)})</span>`
       ).join('\n'),
 
     soft: () =>
