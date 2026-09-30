@@ -1,8 +1,9 @@
 /* ==========================================================
    terminal.js
    Simula una pequeña terminal interactiva en la portada.
-   Depende de PROJECTS y GITHUB_USER, definidos en data.js
-   (por eso data.js se carga antes que este archivo).
+   Depende de I18N (i18n.js) y de PROJECTS y GITHUB_USER,
+   definidos en data.js (por eso se cargan antes que este archivo).
+   Sus textos están en translations.js, dentro de "term".
 
    Expone una sola función global: initTerminal(), que
    app.js llama una vez cargado el documento.
@@ -31,25 +32,21 @@
     out.scrollTop = out.scrollHeight;
   }
 
-  // Cada comando disponible devuelve el texto (o HTML) que se imprime
+  // Los textos salen de translations.js (term.*); los arreglos son varias líneas
+  const lines = (key) => I18N.t(key).join('\n');
+
+  // Orden en que aparecen los comandos al escribir help
+  const HELP_ORDER = ['about', 'skills', 'projects', 'soft', 'contact', 'lang', 'clear'];
+
+  // Cada comando disponible devuelve el texto (o HTML) que se imprime.
+  // Los nombres de comando son iguales en ambos idiomas.
   const COMMANDS = {
     help: () =>
-      'Comandos:\n' +
-      '  about     quién soy\n' +
-      '  skills    lenguajes y tecnologías\n' +
-      '  projects  mis repositorios\n' +
-      '  soft      habilidades blandas\n' +
-      '  contact   cómo encontrarme\n' +
-      '  clear     limpiar pantalla',
+      [I18N.t('term.help.header'), ...HELP_ORDER.map((c) => `  ${c.padEnd(10)}${I18N.t(`term.help.${c}`)}`)].join('\n'),
 
-    about: () =>
-      'Joan Sebastian Chaparro Rodriguez\n' +
-      'Desarrollador en formación, San Gil, Santander.\n' +
-      'Me gusta que el código sea claro y que el programa se explique solo.',
+    about: () => lines('term.about'),
 
-    skills: () =>
-      'Python (principal), MySQL, Pseudocódigo\n' +
-      'JavaScript, Java, JSON, BSON, n8n',
+    skills: () => lines('term.skills'),
 
     projects: () =>
       PROJECTS.map(
@@ -58,16 +55,18 @@
           `<span class="dim">(${I18N.t(`techName.${p.l}`)})</span>`
       ).join('\n'),
 
-    soft: () =>
-      'Pensamiento lógico, aprendizaje autónomo, comunicación clara,\n' +
-      'trabajo en equipo, responsabilidad y adaptabilidad.',
+    soft: () => lines('term.soft'),
 
-    contact: () => `GitHub: <a href="${GITHUB_USER.slice(0, -1)}" target="_blank" rel="noopener">sebaschaparrorodriguez-ux</a>`
+    contact: () => `GitHub: <a href="${GITHUB_USER.slice(0, -1)}" target="_blank" rel="noopener">sebaschaparrorodriguez-ux</a>`,
+
+    // lang es | lang en: cambia el idioma de toda la página
+    lang: (code) =>
+      I18N.setLang(code) ? I18N.t('term.langChanged') : I18N.t('term.langUsage', { lang: I18N.lang })
   };
 
-  // Ejecuta un comando escrito o elegido con un chip
+  // Ejecuta un comando escrito o elegido con un chip ("lang en" -> comando + argumento)
   function runCommand(raw) {
-    const command = raw.trim().toLowerCase();
+    const [command, arg] = raw.trim().toLowerCase().split(/\s+/);
     if (!command) return;
 
     printLine('<span class="pr">&gt;&gt;&gt;</span> ' + escapeHtml(raw));
@@ -78,7 +77,7 @@
     }
 
     const handler = COMMANDS[command];
-    printLine(handler ? handler() : `Comando no reconocido: ${escapeHtml(command)}. Escribe help para ver la lista.`);
+    printLine(handler ? handler(arg) : I18N.t('term.unknown', { cmd: escapeHtml(command) }));
   }
 
   // Efecto de "escritura" para el mensaje de bienvenida
@@ -88,19 +87,13 @@
     out.appendChild(line);
     const typedSpan = line.querySelector('#ty');
 
-    const introText = 'bienvenidos :D';
-    for (const char of introText) {
+    for (const char of I18N.t('term.intro')) {
       typedSpan.textContent += char;
       await sleep(55);
     }
 
     await sleep(250);
-    const welcome = [
-      'Hola, soy Joan Sebastian.',
-      'Soy desarrollador en formación, especializado en Python, MySQL, JavaScript, Java, JSON, BSON y n8n.',
-      'Escribe un comando o toca un botón.'
-    ];
-    for (const text of welcome) {
+    for (const text of I18N.t('term.welcome')) {
       printLine(text);
       await sleep(350);
     }
