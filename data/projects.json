@@ -1,0 +1,56 @@
+{
+  "_comentario": "Copia de referencia de js/data.js en formato JSON. El sitio web NO lee este archivo directamente (usa js/data.js para funcionar sin servidor); sirve para reutilizar la misma información en otras herramientas, por ejemplo un flujo de n8n, un script propio o una API.",
+  "github_user": "https://github.com/sebaschaparrorodriguez-ux/",
+  "projects": [
+    {
+      "nombre": "Clasificador de videojuegos",
+      "lenguaje": "Python",
+      "repositorio": "Clasificador-de-videojuegos",
+      "descripcion": "Recibe por terminal tus videojuegos con horas jugadas y puntuación personal, y entrega tu top 3.",
+      "etiquetas": [
+        "Terminal",
+        "Ranking"
+      ]
+    },
+    {
+      "nombre": "Sistema de finanzas",
+      "lenguaje": "Python",
+      "repositorio": "Sistema-de-Finanzas",
+      "descripcion": "Sistema en Python para organizar y consultar finanzas personales desde la terminal.",
+      "etiquetas": [
+        "Terminal",
+        "Lógica"
+      ]
+    },
+    {
+      "nombre": "Sistema guía de menús",
+      "lenguaje": "Sistemas",
+      "repositorio": "SistemaGuiaDeMenus",
+      "descripcion": "Sistema navegable por menús, pensado para guiar al usuario paso a paso.",
+      "etiquetas": [
+        "Menús",
+        "Experiencia de uso"
+      ]
+    },
+    {
+      "nombre": "Examen MySQL",
+      "lenguaje": "MySQL",
+      "repositorio": "Examen-MySql",
+      "descripcion": "Ejercicio de bases de datos relacionales resuelto con MySQL.",
+      "etiquetas": [
+        "SQL",
+        "Bases de datos"
+      ]
+    },
+    {
+      "nombre": "Pseudocódigo para calcular notas",
+      "lenguaje": "Pseudocódigo",
+      "repositorio": "Examen-Introduccion-Joan-Sebastian-Chaparro-Rodriguez",
+      "descripcion": "Solución del examen de introducción: algoritmo en pseudocódigo (Papyrus) para calcular notas.",
+      "etiquetas": [
+        "Algoritmos",
+        "Papyrus"
+      ]
+    }
+  ]
+}
