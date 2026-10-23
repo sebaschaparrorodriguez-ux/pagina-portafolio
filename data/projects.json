@@ -3,54 +3,233 @@
   "github_user": "https://github.com/sebaschaparrorodriguez-ux/",
   "projects": [
     {
+      "lenguaje": "javascript",
+      "repositorio": "EventPass",
+      "sitio_publicado": "https://eventpass-barrio.vercel.app",
+      "nombre": {
+        "es": "EventPass Barrio",
+        "en": "EventPass Barrio"
+      },
+      "descripcion": {
+        "es": "Plataforma para inscribirse a los eventos navideños del barrio: registro con código por correo, lista de espera, recordatorios por Telegram y Gmail, roles y un asistente que resuelve dudas.",
+        "en": "Platform to sign up for neighborhood Christmas events: email-code sign-up, waitlist, Telegram and Gmail reminders, user roles and an assistant that answers questions."
+      },
+      "etiquetas": {
+        "es": [
+          "React",
+          "n8n",
+          "Vercel"
+        ],
+        "en": [
+          "React",
+          "n8n",
+          "Vercel"
+        ]
+      }
+    },
+    {
+      "lenguaje": "typescript",
+      "repositorio": "AutoFood",
+      "nombre": {
+        "es": "AutoFood",
+        "en": "AutoFood"
+      },
+      "descripcion": {
+        "es": "Plataforma SaaS para restaurantes en Colombia: varios restaurantes en un solo sistema, cada uno aislado con seguridad a nivel de fila en PostgreSQL. En desarrollo.",
+        "en": "SaaS platform for restaurants in Colombia: many restaurants in one system, each isolated with PostgreSQL row-level security. In progress."
+      },
+      "etiquetas": {
+        "es": [
+          "NestJS",
+          "Next.js",
+          "PostgreSQL"
+        ],
+        "en": [
+          "NestJS",
+          "Next.js",
+          "PostgreSQL"
+        ]
+      }
+    },
+    {
+      "lenguaje": "gdscript",
+      "repositorio": "Hasta-el-Nucleo",
+      "nombre": {
+        "es": "Hasta el Núcleo",
+        "en": "Down to the Core"
+      },
+      "descripcion": {
+        "es": "Videojuego cooperativo 3D para 1 a 4 jugadores hecho en Godot: perfora hasta el centro del planeta, mina carbón para el horno y vence jefes en mazmorras. Túnel procedural y multijugador en red.",
+        "en": "Co-op 3D game for 1 to 4 players made in Godot: drill to the center of the planet, mine coal for the furnace and beat dungeon bosses. Procedural tunnel and online multiplayer."
+      },
+      "etiquetas": {
+        "es": [
+          "Godot",
+          "Multijugador",
+          "Videojuego"
+        ],
+        "en": [
+          "Godot",
+          "Multiplayer",
+          "Game"
+        ]
+      }
+    },
+    {
+      "lenguaje": "javascript",
+      "repositorio": "M-s-que-un-antojo-WebPage",
+      "nombre": {
+        "es": "Más que un antojo",
+        "en": "Más que un antojo"
+      },
+      "descripcion": {
+        "es": "Tienda web para una repostería: catálogo con buscador, cuentas de cliente, carrito que envía el pedido por WhatsApp y panel de administración.",
+        "en": "Online store for a bakery: searchable catalog, customer accounts, a cart that sends the order through WhatsApp and an admin panel."
+      },
+      "etiquetas": {
+        "es": [
+          "Node.js",
+          "SQLite",
+          "Tienda"
+        ],
+        "en": [
+          "Node.js",
+          "SQLite",
+          "Store"
+        ]
+      }
+    },
+    {
+      "lenguaje": "mysql",
+      "repositorio": "Nueva-carpeta",
+      "nombre": {
+        "es": "Base de datos de una pizzería",
+        "en": "Pizzeria database"
+      },
+      "descripcion": {
+        "es": "Modelo relacional en tercera forma normal para una pizzería: productos, ingredientes, adiciones, combos, menú y pedidos.",
+        "en": "Relational model in third normal form for a pizzeria: products, ingredients, add-ons, combos, menu and orders."
+      },
+      "etiquetas": {
+        "es": [
+          "SQL",
+          "Modelo E-R"
+        ],
+        "en": [
+          "SQL",
+          "ER model"
+        ]
+      }
+    },
+    {
       "lenguaje": "python",
       "repositorio": "Clasificador-de-videojuegos",
-      "nombre": { "es": "Clasificador de videojuegos", "en": "Video game ranker" },
+      "nombre": {
+        "es": "Clasificador de videojuegos",
+        "en": "Video game ranker"
+      },
       "descripcion": {
         "es": "Recibe por terminal tus videojuegos con horas jugadas y puntuación personal, y entrega tu top 3.",
         "en": "Takes your video games, hours played and personal score from the terminal, and returns your top 3."
       },
-      "etiquetas": { "es": ["Terminal", "Ranking"], "en": ["Terminal", "Ranking"] }
+      "etiquetas": {
+        "es": [
+          "Terminal",
+          "Ranking"
+        ],
+        "en": [
+          "Terminal",
+          "Ranking"
+        ]
+      }
     },
     {
       "lenguaje": "python",
       "repositorio": "Sistema-de-Finanzas",
-      "nombre": { "es": "Sistema de finanzas", "en": "Personal finance system" },
+      "nombre": {
+        "es": "Sistema de finanzas",
+        "en": "Personal finance system"
+      },
       "descripcion": {
         "es": "Sistema en Python para organizar y consultar finanzas personales desde la terminal.",
         "en": "Python system to organize and review personal finances from the terminal."
       },
-      "etiquetas": { "es": ["Terminal", "Lógica"], "en": ["Terminal", "Logic"] }
+      "etiquetas": {
+        "es": [
+          "Terminal",
+          "Lógica"
+        ],
+        "en": [
+          "Terminal",
+          "Logic"
+        ]
+      }
     },
     {
       "lenguaje": "systems",
       "repositorio": "SistemaGuiaDeMenus",
-      "nombre": { "es": "Sistema guía de menús", "en": "Guided menu system" },
+      "nombre": {
+        "es": "Sistema guía de menús",
+        "en": "Guided menu system"
+      },
       "descripcion": {
         "es": "Sistema navegable por menús, pensado para guiar al usuario paso a paso.",
         "en": "Menu-driven system designed to guide the user step by step."
       },
-      "etiquetas": { "es": ["Menús", "Experiencia de uso"], "en": ["Menus", "User experience"] }
+      "etiquetas": {
+        "es": [
+          "Menús",
+          "Experiencia de uso"
+        ],
+        "en": [
+          "Menus",
+          "User experience"
+        ]
+      }
     },
     {
       "lenguaje": "mysql",
       "repositorio": "Examen-MySql",
-      "nombre": { "es": "Examen MySQL", "en": "MySQL exam" },
+      "nombre": {
+        "es": "Examen MySQL",
+        "en": "MySQL exam"
+      },
       "descripcion": {
         "es": "Ejercicio de bases de datos relacionales resuelto con MySQL.",
         "en": "Relational database exercise solved with MySQL."
       },
-      "etiquetas": { "es": ["SQL", "Bases de datos"], "en": ["SQL", "Databases"] }
+      "etiquetas": {
+        "es": [
+          "SQL",
+          "Bases de datos"
+        ],
+        "en": [
+          "SQL",
+          "Databases"
+        ]
+      }
     },
     {
       "lenguaje": "pseudocode",
       "repositorio": "Examen-Introduccion-Joan-Sebastian-Chaparro-Rodriguez",
-      "nombre": { "es": "Pseudocódigo para calcular notas", "en": "Grade calculator in pseudocode" },
+      "nombre": {
+        "es": "Pseudocódigo para calcular notas",
+        "en": "Grade calculator in pseudocode"
+      },
       "descripcion": {
         "es": "Solución del examen de introducción: algoritmo en pseudocódigo (Papyrus) para calcular notas.",
         "en": "Intro exam solution: a pseudocode algorithm (Papyrus) that calculates grades."
       },
-      "etiquetas": { "es": ["Algoritmos", "Papyrus"], "en": ["Algorithms", "Papyrus"] }
+      "etiquetas": {
+        "es": [
+          "Algoritmos",
+          "Papyrus"
+        ],
+        "en": [
+          "Algorithms",
+          "Papyrus"
+        ]
+      }
     }
   ]
 }

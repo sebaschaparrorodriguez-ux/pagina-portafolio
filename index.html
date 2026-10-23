@@ -6,7 +6,7 @@
 <!-- Los textos marcados con data-i18n se traducen desde js/translations.js.
      El español queda escrito aquí como respaldo si JavaScript no carga. -->
 <title data-i18n="meta.title">Joan Sebastian Chaparro | Portafolio</title>
-<meta name="description" data-i18n-attr="content:meta.description" content="Portafolio de Joan Sebastian Chaparro Rodriguez, desarrollador en formación: Python, bases de datos, formatos de datos y automatización.">
+<meta name="description" data-i18n-attr="content:meta.description" content="Portafolio de Joan Sebastian Chaparro Rodriguez, desarrollador en formación: desarrollo web, bases de datos, automatización y videojuegos.">
 
 <!-- Tipografías -->
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
   <header class="hero">
     <div>
       <h1><strong>Joan Sebastian</strong> Chaparro Rodriguez</h1>
-      <p class="lead" data-i18n="hero.lead">Desarrollador en formación desde San Gil, Santander. Python, bases de datos, formatos de datos y automatización, con la lógica pensada antes del código.</p>
+      <p class="lead" data-i18n="hero.lead">Desarrollador en formación desde San Gil, Santander. Aplicaciones web, bases de datos, automatización y videojuegos, con la lógica pensada antes del código.</p>
       <a class="btn p" href="#proyectos" data-i18n="hero.cta">Ver proyectos</a>
       <a class="btn" href="https://github.com/sebaschaparrorodriguez-ux" target="_blank" rel="noopener">GitHub</a>
     </div>
@@ -59,11 +59,11 @@
   <section id="sobre-mi">
     <h2 data-i18n="about.title">Sobre mí</h2>
     <div>
-      <p class="big" data-i18n="about.intro">Soy Joan Sebastian, de San Gil, Santander. Empecé con pseudocódigo para entender la lógica, seguí con Python y hoy sumo bases de datos, formatos de datos y automatización.</p>
+      <p class="big" data-i18n="about.intro">Soy Joan Sebastian, de San Gil, Santander. Empecé con pseudocódigo para entender la lógica, seguí con Python y hoy construyo aplicaciones web con JavaScript y TypeScript, bases de datos, automatizaciones con n8n y un videojuego en Godot.</p>
       <p style="color:var(--muted);max-width:38em;margin:0 0 32px" data-i18n="about.body">Me gusta construir programas simples que resuelven una necesidad concreta y que cualquiera pueda entender. Busco un equipo donde aprender rápido, aportar con constancia y crecer como desarrollador.</p>
       <dl class="facts">
         <div><dt data-i18n="about.facts.location">Ubicación</dt><dd>San Gil, Santander, Colombia</dd></div>
-        <div><dt data-i18n="about.facts.focus">Enfoque</dt><dd data-i18n="about.facts.focusValue">Lógica, datos y automatización</dd></div>
+        <div><dt data-i18n="about.facts.focus">Enfoque</dt><dd data-i18n="about.facts.focusValue">Desarrollo web, datos y automatización</dd></div>
         <div><dt data-i18n="about.facts.mainLang">Lenguaje principal</dt><dd>Python</dd></div>
         <div><dt data-i18n="about.facts.seeking">Busco</dt><dd data-i18n="about.facts.seekingValue">Oportunidades para crecer como desarrollador y aportar a proyectos con impacto</dd></div>
       </dl>
@@ -75,14 +75,23 @@
     <h2 data-i18n="tech.title">Lenguajes y tecnologías</h2>
     <div>
       <h3 class="g" data-i18n="tech.withProjects">Con proyectos en GitHub (toca uno para filtrar)</h3>
-      <!-- Estos tres botones se marcan como activos desde js/app.js.
+      <!-- Estos botones se marcan como activos desde js/app.js.
            data-l es el id del lenguaje en js/data.js; el contador (em) se calcula solo -->
       <div class="rows" id="lp">
+        <button class="row" data-l="javascript" aria-pressed="false">
+          <b>JavaScript</b><span data-i18n="tech.desc.javascript">Páginas y aplicaciones web: tiendas, plataformas de eventos y este portafolio.</span><em>2 proyectos</em>
+        </button>
+        <button class="row" data-l="typescript" aria-pressed="false">
+          <b>TypeScript</b><span data-i18n="tech.desc.typescript">Aplicaciones web más grandes con tipos: API y panel de un SaaS.</span><em>1 proyecto</em>
+        </button>
         <button class="row main" data-l="python" aria-pressed="false">
           <b>Python</b><span data-i18n="tech.desc.python">Mi lenguaje principal: programas de terminal con menús, datos de usuario y rankings.</span><em>2 proyectos</em>
         </button>
+        <button class="row" data-l="gdscript" aria-pressed="false">
+          <b>GDScript</b><span data-i18n="tech.desc.gdscript">Videojuegos en Godot: lógica de juego, enemigos y multijugador.</span><em>1 proyecto</em>
+        </button>
         <button class="row" data-l="mysql" aria-pressed="false">
-          <b>MySQL</b><span data-i18n="tech.desc.mysql">Bases de datos relacionales y consultas.</span><em>1 proyecto</em>
+          <b>MySQL</b><span data-i18n="tech.desc.mysql">Bases de datos relacionales y consultas.</span><em>2 proyectos</em>
         </button>
         <button class="row" data-l="pseudocode" aria-pressed="false">
           <b data-i18n="techName.pseudocode">Pseudocódigo</b><span data-i18n="tech.desc.pseudocode">Diseño de algoritmos antes de programar.</span><em>1 proyecto</em>
@@ -91,7 +100,9 @@
 
       <h3 class="g" data-i18n="tech.alsoKnow">También manejo</h3>
       <div class="rows">
-        <div class="row"><b>JavaScript</b><span data-i18n="tech.desc.javascript">Lógica e interactividad para la web.</span></div>
+        <div class="row"><b>React</b><span data-i18n="tech.desc.react">Interfaces web por componentes.</span></div>
+        <div class="row"><b>Node.js</b><span data-i18n="tech.desc.node">Servidores y API en JavaScript.</span></div>
+        <div class="row"><b>PostgreSQL</b><span data-i18n="tech.desc.postgresql">Bases de datos relacionales con seguridad por fila.</span></div>
         <div class="row"><b>Java</b><span data-i18n="tech.desc.java">Programación orientada a objetos.</span></div>
         <div class="row"><b>JSON</b><span data-i18n="tech.desc.json">Intercambio de datos entre sistemas y APIs.</span></div>
         <div class="row"><b>BSON</b><span data-i18n="tech.desc.bson">Formato binario de documentos, el que usa MongoDB.</span></div>

@@ -6,19 +6,75 @@
 
    Para agregar un proyecto nuevo copia un objeto del arreglo
    PROJECTS y cambia:
-     l -> id del lenguaje principal: python, mysql, pseudocode
-          o systems. Su nombre visible está en techName dentro
-          de js/translations.js
+     l -> id del lenguaje principal: javascript, typescript,
+          python, gdscript, mysql, pseudocode o systems. Su
+          nombre visible está en techName dentro de
+          js/translations.js
      r -> nombre exacto del repositorio en GitHub
      n -> nombre del proyecto        { es, en }
      d -> descripción corta          { es, en }
      t -> etiquetas para los chips   { es: [...], en: [...] }
+     w -> (opcional) enlace a la versión publicada
+
+   El orden del arreglo es el orden en que se muestran:
+   los proyectos más recientes van primero.
    ========================================================== */
 
 // Usuario de GitHub; se reutiliza para armar los enlaces de cada repo
 const GITHUB_USER = 'https://github.com/sebaschaparrorodriguez-ux/';
 
 const PROJECTS = [
+  {
+    l: 'javascript',
+    r: 'EventPass',
+    w: 'https://eventpass-barrio.vercel.app',
+    n: { es: 'EventPass Barrio', en: 'EventPass Barrio' },
+    d: {
+      es: 'Plataforma para inscribirse a los eventos navideños del barrio: registro con código por correo, lista de espera, recordatorios por Telegram y Gmail, roles y un asistente que resuelve dudas.',
+      en: 'Platform to sign up for neighborhood Christmas events: email-code sign-up, waitlist, Telegram and Gmail reminders, user roles and an assistant that answers questions.'
+    },
+    t: { es: ['React', 'n8n', 'Vercel'], en: ['React', 'n8n', 'Vercel'] }
+  },
+  {
+    l: 'typescript',
+    r: 'AutoFood',
+    n: { es: 'AutoFood', en: 'AutoFood' },
+    d: {
+      es: 'Plataforma SaaS para restaurantes en Colombia: varios restaurantes en un solo sistema, cada uno aislado con seguridad a nivel de fila en PostgreSQL. En desarrollo.',
+      en: 'SaaS platform for restaurants in Colombia: many restaurants in one system, each isolated with PostgreSQL row-level security. In progress.'
+    },
+    t: { es: ['NestJS', 'Next.js', 'PostgreSQL'], en: ['NestJS', 'Next.js', 'PostgreSQL'] }
+  },
+  {
+    l: 'gdscript',
+    r: 'Hasta-el-Nucleo',
+    n: { es: 'Hasta el Núcleo', en: 'Down to the Core' },
+    d: {
+      es: 'Videojuego cooperativo 3D para 1 a 4 jugadores hecho en Godot: perfora hasta el centro del planeta, mina carbón para el horno y vence jefes en mazmorras. Túnel procedural y multijugador en red.',
+      en: 'Co-op 3D game for 1 to 4 players made in Godot: drill to the center of the planet, mine coal for the furnace and beat dungeon bosses. Procedural tunnel and online multiplayer.'
+    },
+    t: { es: ['Godot', 'Multijugador', 'Videojuego'], en: ['Godot', 'Multiplayer', 'Game'] }
+  },
+  {
+    l: 'javascript',
+    r: 'M-s-que-un-antojo-WebPage',
+    n: { es: 'Más que un antojo', en: 'Más que un antojo' },
+    d: {
+      es: 'Tienda web para una repostería: catálogo con buscador, cuentas de cliente, carrito que envía el pedido por WhatsApp y panel de administración.',
+      en: 'Online store for a bakery: searchable catalog, customer accounts, a cart that sends the order through WhatsApp and an admin panel.'
+    },
+    t: { es: ['Node.js', 'SQLite', 'Tienda'], en: ['Node.js', 'SQLite', 'Store'] }
+  },
+  {
+    l: 'mysql',
+    r: 'Nueva-carpeta',
+    n: { es: 'Base de datos de una pizzería', en: 'Pizzeria database' },
+    d: {
+      es: 'Modelo relacional en tercera forma normal para una pizzería: productos, ingredientes, adiciones, combos, menú y pedidos.',
+      en: 'Relational model in third normal form for a pizzeria: products, ingredients, add-ons, combos, menu and orders.'
+    },
+    t: { es: ['SQL', 'Modelo E-R'], en: ['SQL', 'ER model'] }
+  },
   {
     l: 'python',
     r: 'Clasificador-de-videojuegos',

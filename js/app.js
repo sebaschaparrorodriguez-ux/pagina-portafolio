@@ -17,14 +17,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.getElementById('grid');
   const languageRows = document.getElementById('lp');
 
-  // Ids de lenguaje (ver techName en translations.js); 'all' muestra todo
-  const FILTERS = ['all', 'python', 'mysql', 'pseudocode'];
+  // Ids de lenguaje (ver techName en translations.js); 'all' muestra todo.
+  // Se arman desde PROJECTS para que todo proyecto nuevo tenga su filtro.
+  const FILTERS = ['all', ...new Set(PROJECTS.map((p) => p.l))];
   let currentFilter = 'all';
 
   const techLabel = (id) => I18N.t(`techName.${id}`);
   const filterLabel = (id) => (id === 'all' ? I18N.t('projects.all') : techLabel(id));
 
-  // Dibuja los botones de filtro (Todos / Python / MySQL / Pseudocódigo)
+  // Dibuja los botones de filtro (Todos / JavaScript / Python / ...)
   function renderFilterButtons() {
     filterBar.innerHTML = FILTERS.map(
       (id) => `<button aria-pressed="${id === currentFilter}" data-filter="${id}">${filterLabel(id)}</button>`
@@ -45,7 +46,10 @@ document.addEventListener('DOMContentLoaded', () => {
             ${I18N.pick(p.t).map((tag) => `<span>${tag}</span>`).join('')}
           </div>
           <p>${I18N.pick(p.d)}</p>
-          <a href="${GITHUB_USER}${p.r}" target="_blank" rel="noopener">${I18N.t('projects.viewCode')}</a>
+          <div class="lk">
+            <a href="${GITHUB_USER}${p.r}" target="_blank" rel="noopener">${I18N.t('projects.viewCode')}</a>
+            ${p.w ? `<a href="${p.w}" target="_blank" rel="noopener">${I18N.t('projects.viewLive')}</a>` : ''}
+          </div>
         </article>`
       )
       .join('');
@@ -68,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     syncLanguageRows();
   }
 
-  // Clic en un botón de filtro (Todos / Python / MySQL / Pseudocódigo)
+  // Clic en un botón de filtro
   filterBar.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
     if (!btn) return;

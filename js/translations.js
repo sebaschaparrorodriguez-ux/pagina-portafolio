@@ -18,7 +18,7 @@ const TRANSLATIONS = {
   es: {
     meta: {
       title: 'Joan Sebastian Chaparro | Portafolio',
-      description: 'Portafolio de Joan Sebastian Chaparro Rodriguez, desarrollador en formación: Python, bases de datos, formatos de datos y automatización.'
+      description: 'Portafolio de Joan Sebastian Chaparro Rodriguez, desarrollador en formación: desarrollo web, bases de datos, automatización y videojuegos.'
     },
     nav: {
       label: 'Principal',
@@ -32,17 +32,17 @@ const TRANSLATIONS = {
       label: 'Idioma'
     },
     hero: {
-      lead: 'Desarrollador en formación desde San Gil, Santander. Python, bases de datos, formatos de datos y automatización, con la lógica pensada antes del código.',
+      lead: 'Desarrollador en formación desde San Gil, Santander. Aplicaciones web, bases de datos, automatización y videojuegos, con la lógica pensada antes del código.',
       cta: 'Ver proyectos'
     },
     about: {
       title: 'Sobre mí',
-      intro: 'Soy Joan Sebastian, de San Gil, Santander. Empecé con pseudocódigo para entender la lógica, seguí con Python y hoy sumo bases de datos, formatos de datos y automatización.',
+      intro: 'Soy Joan Sebastian, de San Gil, Santander. Empecé con pseudocódigo para entender la lógica, seguí con Python y hoy construyo aplicaciones web con JavaScript y TypeScript, bases de datos, automatizaciones con n8n y un videojuego en Godot.',
       body: 'Me gusta construir programas simples que resuelven una necesidad concreta y que cualquiera pueda entender. Busco un equipo donde aprender rápido, aportar con constancia y crecer como desarrollador.',
       facts: {
         location: 'Ubicación',
         focus: 'Enfoque',
-        focusValue: 'Lógica, datos y automatización',
+        focusValue: 'Desarrollo web, datos y automatización',
         mainLang: 'Lenguaje principal',
         seeking: 'Busco',
         seekingValue: 'Oportunidades para crecer como desarrollador y aportar a proyectos con impacto'
@@ -56,7 +56,12 @@ const TRANSLATIONS = {
         python: 'Mi lenguaje principal: programas de terminal con menús, datos de usuario y rankings.',
         mysql: 'Bases de datos relacionales y consultas.',
         pseudocode: 'Diseño de algoritmos antes de programar.',
-        javascript: 'Lógica e interactividad para la web.',
+        javascript: 'Páginas y aplicaciones web: tiendas, plataformas de eventos y este portafolio.',
+        typescript: 'Aplicaciones web más grandes con tipos: API y panel de un SaaS.',
+        gdscript: 'Videojuegos en Godot: lógica de juego, enemigos y multijugador.',
+        react: 'Interfaces web por componentes.',
+        node: 'Servidores y API en JavaScript.',
+        postgresql: 'Bases de datos relacionales con seguridad por fila.',
         java: 'Programación orientada a objetos.',
         json: 'Intercambio de datos entre sistemas y APIs.',
         bson: 'Formato binario de documentos, el que usa MongoDB.',
@@ -65,7 +70,10 @@ const TRANSLATIONS = {
     },
     // Nombre visible de cada lenguaje (la clave es el id usado en data.js)
     techName: {
+      javascript: 'JavaScript',
+      typescript: 'TypeScript',
       python: 'Python',
+      gdscript: 'GDScript',
       mysql: 'MySQL',
       pseudocode: 'Pseudocódigo',
       systems: 'Sistemas'
@@ -75,6 +83,7 @@ const TRANSLATIONS = {
       filterLabel: 'Filtrar por lenguaje',
       all: 'Todos',
       viewCode: 'Ver código en GitHub',
+      viewLive: 'Ver página publicada',
       count: {
         one: '{count} proyecto',
         other: '{count} proyectos'
@@ -126,7 +135,7 @@ const TRANSLATIONS = {
       intro: 'bienvenidos :D',
       welcome: [
         'Hola, soy Joan Sebastian.',
-        'Soy desarrollador en formación, especializado en Python, MySQL, JavaScript, Java, JSON, BSON y n8n.',
+        'Soy desarrollador en formación: web con JavaScript y TypeScript, Python, bases de datos, n8n y videojuegos en Godot.',
         'Escribe un comando o toca un botón.'
       ],
       help: {
@@ -145,8 +154,8 @@ const TRANSLATIONS = {
         'Me gusta que el código sea claro y que el programa se explique solo.'
       ],
       skills: [
-        'Python (principal), MySQL, Pseudocódigo',
-        'JavaScript, Java, JSON, BSON, n8n'
+        'JavaScript, TypeScript, Python, GDScript, MySQL, Pseudocódigo',
+        'React, Node.js, PostgreSQL, Java, JSON, BSON, n8n'
       ],
       soft: [
         'Pensamiento lógico, aprendizaje autónomo, comunicación clara,',
@@ -161,7 +170,7 @@ const TRANSLATIONS = {
   en: {
     meta: {
       title: 'Joan Sebastian Chaparro | Portfolio',
-      description: 'Portfolio of Joan Sebastian Chaparro Rodriguez, developer in training: Python, databases, data formats and automation.'
+      description: 'Portfolio of Joan Sebastian Chaparro Rodriguez, developer in training: web development, databases, automation and games.'
     },
     nav: {
       label: 'Main',
@@ -175,17 +184,17 @@ const TRANSLATIONS = {
       label: 'Language'
     },
     hero: {
-      lead: 'Developer in training based in San Gil, Santander, Colombia. Python, databases, data formats and automation, with the logic worked out before the code.',
+      lead: 'Developer in training based in San Gil, Santander, Colombia. Web apps, databases, automation and games, with the logic worked out before the code.',
       cta: 'View projects'
     },
     about: {
       title: 'About me',
-      intro: "I'm Joan Sebastian, from San Gil, Santander. I started with pseudocode to understand logic, moved on to Python, and today I also work with databases, data formats and automation.",
+      intro: "I'm Joan Sebastian, from San Gil, Santander. I started with pseudocode to understand logic, moved on to Python, and today I build web apps with JavaScript and TypeScript, databases, n8n automations and a game in Godot.",
       body: "I enjoy building simple programs that solve a concrete need and that anyone can understand. I'm looking for a team where I can learn fast, contribute consistently and grow as a developer.",
       facts: {
         location: 'Location',
         focus: 'Focus',
-        focusValue: 'Logic, data and automation',
+        focusValue: 'Web development, data and automation',
         mainLang: 'Main language',
         seeking: 'Looking for',
         seekingValue: 'Opportunities to grow as a developer and contribute to impactful projects'
@@ -199,7 +208,12 @@ const TRANSLATIONS = {
         python: 'My main language: terminal programs with menus, user input and rankings.',
         mysql: 'Relational databases and queries.',
         pseudocode: 'Designing algorithms before writing code.',
-        javascript: 'Logic and interactivity for the web.',
+        javascript: 'Websites and web apps: online stores, event platforms and this portfolio.',
+        typescript: 'Larger typed web apps: the API and dashboard of a SaaS.',
+        gdscript: 'Games in Godot: gameplay logic, enemies and multiplayer.',
+        react: 'Component-based web interfaces.',
+        node: 'Servers and APIs in JavaScript.',
+        postgresql: 'Relational databases with row-level security.',
         java: 'Object-oriented programming.',
         json: 'Data exchange between systems and APIs.',
         bson: 'Binary document format used by MongoDB.',
@@ -207,7 +221,10 @@ const TRANSLATIONS = {
       }
     },
     techName: {
+      javascript: 'JavaScript',
+      typescript: 'TypeScript',
       python: 'Python',
+      gdscript: 'GDScript',
       mysql: 'MySQL',
       pseudocode: 'Pseudocode',
       systems: 'Systems'
@@ -217,6 +234,7 @@ const TRANSLATIONS = {
       filterLabel: 'Filter by language',
       all: 'All',
       viewCode: 'View code on GitHub',
+      viewLive: 'View live site',
       count: {
         one: '{count} project',
         other: '{count} projects'
@@ -268,7 +286,7 @@ const TRANSLATIONS = {
       intro: 'welcome :D',
       welcome: [
         "Hi, I'm Joan Sebastian.",
-        "I'm a developer in training, working with Python, MySQL, JavaScript, Java, JSON, BSON and n8n.",
+        "I'm a developer in training: web with JavaScript and TypeScript, Python, databases, n8n and games in Godot.",
         'Type a command or tap a button.'
       ],
       help: {
@@ -287,8 +305,8 @@ const TRANSLATIONS = {
         'I like clear code and programs that explain themselves.'
       ],
       skills: [
-        'Python (main), MySQL, Pseudocode',
-        'JavaScript, Java, JSON, BSON, n8n'
+        'JavaScript, TypeScript, Python, GDScript, MySQL, Pseudocode',
+        'React, Node.js, PostgreSQL, Java, JSON, BSON, n8n'
       ],
       soft: [
         'Logical thinking, self-directed learning, clear communication,',

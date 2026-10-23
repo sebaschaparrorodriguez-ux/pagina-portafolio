@@ -116,6 +116,7 @@ button.row:hover,button.row[aria-pressed=true]{background:var(--card);padding-le
 .tg{display:flex;flex-wrap:wrap;gap:6px}
 .tg span{font-size:12px;color:var(--muted);border:1px solid var(--line);padding:1px 10px;border-radius:99px}
 .tg .l{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.pj .lk{display:flex;flex-wrap:wrap;gap:6px 18px}
 
 /* ---------- 7. HABILIDADES BLANDAS (acordeón) ---------- */
 details{border-bottom:1px solid var(--line)}
